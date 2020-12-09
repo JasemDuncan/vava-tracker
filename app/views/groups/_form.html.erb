@@ -1,0 +1,14 @@
+<h1><%= name%> Group</h1>
+<%= form_for(@group) do |f|%>    
+    <%= @group.errors.full_messages do |message|%>
+        <div>
+            *<%= message %>
+        </div>
+    <%end%>
+    <div>
+        <%= f.text_field :name, palceholder: "Name"%>
+    </div>
+    <div>
+    <%= f.submit "Create group" %>
+    </div>    
+<%end%>
