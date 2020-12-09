@@ -1,1 +1,12 @@
-<h1>login</h1>
+<div>
+  <div>
+    <h4>LOGIN</h4>
+  </div>
+  <div >
+    <%= button_to "Login", user_index_path, method: :get %>    
+  </div>
+</div>
+
+<div >
+    <%= text_field_tag :name, nil, placeholder: 'Name' %>
+</div>
