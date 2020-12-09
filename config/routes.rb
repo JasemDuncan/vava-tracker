@@ -1,3 +1,19 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  # get 'transaction/index'
+  # get 'transaction/show'
+  resources :transactions
+
+  #get 'group/index'
+  resources :groups
+
+  resources :users
+
+  # get 'users/index'
+  # get 'users/login'
+  # get 'users/splash'
+  # post 'users/splash'
+  # post 'users/login'  
+  
+  root 'users#splash'
+
 end

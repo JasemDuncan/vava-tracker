@@ -1,0 +1,17 @@
+<h1>Create Transaction</h1>
+<%= form_for(@transaction) do |f|%>    
+    <%= @transaction.errors.full_messages do |message|%>
+        <div>
+            *<%= message %>
+        </div>
+    <%end%>
+    <div>
+        <%= f.text_field :name, placeholder: "Name"%>
+    </div>
+    <div>
+        <%= f.text_field :amount, placeholder: "Amount"%>
+    </div>
+    <div>
+    <%= f.submit "Create transaction" %>
+    </div>    
+<%end%>

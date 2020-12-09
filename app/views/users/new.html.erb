@@ -1,0 +1,14 @@
+<h1>Login</h1>
+<%= form_for(@user) do |f|%>    
+    <%= @user.errors.full_messages do |message|%>
+        <div>
+            *<%= message %>
+        </div>
+    <%end%>
+    <div>
+        <%= f.text_field :name, palceholder: "Name"%>
+    </div>
+    <div>
+    <%= f.submit "Login*" %>
+    </div>    
+<%end%>
