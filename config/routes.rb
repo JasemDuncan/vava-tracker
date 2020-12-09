@@ -1,17 +1,19 @@
 Rails.application.routes.draw do
   # get 'transaction/index'
   # get 'transaction/show'
-  resources :transaction
+  resources :transactions
 
   #get 'group/index'
-  resources :group
+  resources :groups
 
-  get 'user/index'
-  get 'user/login'
-  get 'user/splash'
-  post 'user/splash'
-  post 'user/login'  
+  resources :users
+
+  # get 'users/index'
+  # get 'users/login'
+  # get 'users/splash'
+  # post 'users/splash'
+  # post 'users/login'  
   
-  root 'user#splash'
+  root 'users#splash'
 
 end

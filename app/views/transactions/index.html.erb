@@ -1,0 +1,10 @@
+<% @transactions.each do |transaction|%>
+    <h1><%= transaction.name%></h1>
+    <div>
+        <%= transaction.amount%>
+    </div>
+    <div>
+        <%= transaction.created_at%>
+    </div>
+<%end%>
+
