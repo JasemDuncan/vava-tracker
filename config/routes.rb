@@ -5,9 +5,9 @@ Rails.application.routes.draw do
   resources :transactions
 
   #get 'group/index'
-  resources :groups
+  resources :groups  
 
-  resources :users
+  resources :welcome
 
   # get 'users/index'
   # get 'users/login'

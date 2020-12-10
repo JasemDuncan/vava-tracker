@@ -1,4 +1,9 @@
 <h1><%= @group.name%></h1>
+<% unless @group.user.nil?%>
+    <p>
+        Created by <%= @group.user.email%>
+    </p>
+<%end%>
 <div>
     <%= link_to "Edit", edit_group_path(@group.id)%>
 </div>
