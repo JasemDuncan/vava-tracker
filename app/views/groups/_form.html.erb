@@ -1,6 +1,6 @@
-<h1>Login</h1>
-<%= form_for(@user) do |f|%>    
-    <%= @user.errors.full_messages do |message|%>
+<h1><%= name%> Group</h1>
+<%= form_for(@group) do |f|%>    
+    <%= @group.errors.full_messages do |message|%>
         <div>
             *<%= message %>
         </div>
@@ -9,6 +9,6 @@
         <%= f.text_field :name, palceholder: "Name"%>
     </div>
     <div>
-    <%= f.submit "Login*" %>
+    <%= f.submit "Create group" %>
     </div>    
 <%end%>

@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
+  devise_for :users
   # get 'transaction/index'
   # get 'transaction/show'
   resources :transactions
 
   #get 'group/index'
-  resources :groups
+  resources :groups  
 
-  resources :users
+  resources :welcome
 
   # get 'users/index'
   # get 'users/login'
@@ -14,6 +15,6 @@ Rails.application.routes.draw do
   # post 'users/splash'
   # post 'users/login'  
   
-  root 'users#splash'
+  root 'welcome#index'
 
 end

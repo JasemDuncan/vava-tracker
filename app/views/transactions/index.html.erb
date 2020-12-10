@@ -1,10 +1,24 @@
-<% @transactions.each do |transaction|%>
-    <h1><%= transaction.name%></h1>
-    <div>
-        <%= transaction.amount%>
-    </div>
-    <div>
-        <%= transaction.created_at%>
-    </div>
-<%end%>
+<div class="row center-xs">
+    <div class="cols-xs-8 col-md-6">
+        <div class="box">               
+            <%total=0%>            
+            <% @transactions.each do |transaction|%>
+                <h1><%= transaction.name%></h1>
+                <div>
+                    I studied <%= transaction.amount%> HOURS
+                </div>
+                <div>
+                    <%= transaction.created_at%>
+                </div>
+                <% total=total+transaction.amount.to_int%>
+            <%end%>
+            <div>
+            TOTAL <%=total%>
+            </div>
+            <div>
+                <%= link_to "New", new_transaction_path%>
+            </div>
 
+        </div>
+    </div>
+</div>

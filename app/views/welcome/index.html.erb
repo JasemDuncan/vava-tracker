@@ -1,0 +1,46 @@
+<% unless user_signed_in? %>
+    <div class="row center-xs">
+        <div class="cols-xs-8 col-md-6">
+            <div class="box">               
+                <h1 >Snapscan</h1>        
+                <div>
+                    <div>
+                        <%= link_to 'Log In', new_user_session_path, class:'link text-casual-bold text-light text-uppercase' %>
+                    </div>
+                    <div>
+                        <%= link_to 'Sign Up', new_user_registration_path%>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<%else%>    
+<div class="row center-xs">
+    <div class="cols-xs-8 col-md-6">
+        <div class="box"> 
+            EN INNDEX
+            <h3 class="text-light"><%= current_user.email%></h3>    
+                
+            <div >
+            <%= link_to 'Account Settings', edit_user_password_path(@user), class:'link text-light text-size' %>
+            </div>
+
+            <div >
+            <%= link_to 'Subjects', transactions_path, class:'link text-light text-size' %>
+            </div>
+
+            <div >
+            <%= link_to 'Subjects not assiegned', transactions_path, class:'link text-light text-size' %>        
+
+            
+            <div >
+            <%= link_to 'My courses', groups_path, class:'link text-light text-size' %>
+            </div>
+
+            <div >
+            <%= link_to 'Log out', destroy_user_session_path, method: :delete, class:"text-uppercase mt-4 mb-4 text-light text-casual-bold text-size mx-auto link" %>
+            </div>
+        </div>
+    </div>
+</div>    
+<%end%>

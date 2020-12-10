@@ -1,7 +1,7 @@
 class TransactionsController < ApplicationController
   # GET /transactions
   def index
-    @transactions = Transaction.all
+    @transactions = Transaction.where(user_id: current_user.id).order(created_at: :desc)
   end
 
   # GET /transactions/:id
@@ -17,7 +17,8 @@ class TransactionsController < ApplicationController
   # POST /transactions/
   def create
     @transaction = Transaction.new(name: params[:transaction][:name],
-                                   amount: params[:transaction][:amount])
+                                   amount: params[:transaction][:amount],
+                                   user_id: current_user.id)
     if @transaction.save
       redirect_to @transaction
     else
