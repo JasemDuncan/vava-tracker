@@ -6,13 +6,16 @@
         </div>
     <%end%>
     <div>
+        <%= f.collection_select :group_id, Group.all, :id, :name, include_blank: 'None', prompt: 'Select group' %>
+    </div>
+    <div>
         <%= f.text_field :name, placeholder: "Name"%>
     </div>
     <div>
         <%= f.text_field :amount, placeholder: "Amount"%>
     </div>
     <div>
-    
+
     <%= f.submit "Create transaction" %>
     </div>    
 <%end%>
