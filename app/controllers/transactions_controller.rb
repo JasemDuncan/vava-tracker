@@ -15,9 +15,8 @@ class TransactionsController < ApplicationController
   end
 
   def external
-    #external_expenses    
-    @transactions = Transaction.where(user_id: current_user.id,group_id: nil).order(created_at: :desc)
-    
+    # external_expenses
+    @transactions = Transaction.where(user_id: current_user.id, group_id: nil).order(created_at: :desc)
   end
 
   # POST /transactions/
@@ -25,7 +24,7 @@ class TransactionsController < ApplicationController
     @transaction = Transaction.new(name: params[:transaction][:name],
                                    amount: params[:transaction][:amount],
                                    user_id: current_user.id,
-                                   group_id: params[:transaction][:group_id] )
+                                   group_id: params[:transaction][:group_id])
     if @transaction.save
       redirect_to @transaction
     else
