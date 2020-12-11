@@ -1,15 +1,16 @@
 class GroupsController < ApplicationController
   # callback or you can use
   # before_action :authenticate_user!, only: [:create, :new]
-  before_action :validate_user, except: %i[show index update edit]
-  before_action :set_article, except: %i[index new]
+  before_action :validate_user, except: %i[show index update edit ]
+  before_action :set_group, except: %i[index new create]
   # GET group
   def index
     @groups = Group.all
   end
 
   # GET /groups/:id
-  def show; end
+  def show 
+  end
 
   # Get /groups/new
   def new
@@ -45,12 +46,16 @@ class GroupsController < ApplicationController
 
   private
 
-  def set_article
+  def set_group
+    puts "**here set_group"
     @group = Group.find(params[:id])
   end
 
   def validate_user
+    unless user_signed_in?
+    puts "*here it is validating (validate_user)"
     redirect_to new_user_session_path, notice: 'For create new group you must log in first'
+    end
   end
 
   def group_params

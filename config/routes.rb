@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # get 'transaction/index'
   # get 'transaction/show'
   resources :transactions
-
+  get 'external', to: 'transactions#external', as: 'external'
   #get 'group/index'
   resources :groups  
 

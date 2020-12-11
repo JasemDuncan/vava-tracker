@@ -6,13 +6,7 @@
     </li>
     <li class="col-md">
       <%= link_to "home", root_path%>
-    </li>
-    <li class="col-md">
-      Groups
-    </li>
-    <li class="col-md">
-      Transactions
-    </li>
+    </li>   
     <% if user_signed_in?%>
         <li class="col-md">
             <%= link_to "Sign out", destroy_user_session_path, method: :delete%>
