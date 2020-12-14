@@ -20,25 +20,20 @@
         <div class="box"> 
             EN INNDEX
             <h3 class="text-light"><%= current_user.email%></h3>    
-                
             <div >
-            <%= link_to 'Account Settings', edit_user_password_path(@user), class:'link text-light text-size' %>
+            <%= link_to 'All my subjects', transactions_path%>
             </div>
 
             <div >
-            <%= link_to 'Subjects', transactions_path, class:'link text-light text-size' %>
-            </div>
-
-            <div >
-            <%= link_to 'Subjects not assiegned', external_path, class:'link text-light text-size' %>        
+            <%= link_to 'All my external subjects', external_path%>        
 
             
             <div >
-            <%= link_to 'My courses', groups_path, class:'link text-light text-size' %>
+            <%= link_to 'All groups', groups_path%>
             </div>
 
             <div >
-            <%= link_to 'Log out', destroy_user_session_path, method: :delete, class:"text-uppercase mt-4 mb-4 text-light text-casual-bold text-size mx-auto link" %>
+            <%= link_to 'Log out', destroy_user_session_path, method: :delete%>
             </div>
         </div>
     </div>

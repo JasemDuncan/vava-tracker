@@ -9,6 +9,11 @@
         <%= f.text_field :name, palceholder: "Name"%>
     </div>
     <div>
+        <%= f.collection_select :group,Group.all, include_blank: 'None', prompt: 'Select group' %>
+    </div>
+    <div>
     <%= f.submit "Create group" %>
     </div>    
+
 <%end%>
+

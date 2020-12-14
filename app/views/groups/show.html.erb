@@ -4,6 +4,21 @@
         Created by <%= @group.user.email%>
     </p>
 <%end%>
+<% @inside_groups.each do |inside|%>
+    <p>
+        <%= inside.name%>
+        <%= inside.amount%>
+        <%= inside.email%>
+    </p>
+    <p>
+    ---
+    </p>
+    <p>&#x1F402;</p>
+    <span style="font-size:100px;">&#x1F3F9;</span>
+<%end%>
 <div>
     <%= link_to "Edit", edit_group_path(@group.id)%>
 </div>
+
+
+
