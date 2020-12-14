@@ -9,10 +9,8 @@ class GroupsController < ApplicationController
   end
 
   # GET /groups/:id
-  def show 
-    @inside_groups=Transaction.joins(:user).select("users.email,transactions.name,transactions.amount,transactions.created_at").where(group_id: params[:id], user_id: current_user.id)
-    puts params[:id]
-    puts "valencia"
+  def show
+    @inside_groups = Transaction.joins(:user).select('users.email,transactions.name,transactions.amount,transactions.created_at').where(group_id: params[:id], user_id: current_user.id)
     # @group = Group.find(params[:id])
   end
 
