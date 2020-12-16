@@ -5,6 +5,7 @@ class WelcomeController < ApplicationController
   def show; end
 
   private
+
   def validate_user
     return if user_signed_in?
 

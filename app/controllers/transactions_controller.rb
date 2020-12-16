@@ -53,6 +53,7 @@ class TransactionsController < ApplicationController
   end
 
   private
+
   def transaction_params
     params.require(:transaction).permit(:name, :amount, :group_id)
   end
