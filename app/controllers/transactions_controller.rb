@@ -14,6 +14,26 @@ class TransactionsController < ApplicationController
     @transaction = Transaction.new
   end
 
+  def edit
+    @transaction = Transaction.find(params[:id])
+  end
+
+  # DELETE /transactions/:id
+  def destroy
+    @transaction = Transaction.find(params[:id])
+    @transaction.destroy
+    redirect_to transactions_path
+  end
+
+  def update
+    @transaction = Transaction.find(params[:id])
+    if @transaction.update(transaction_params)
+      redirect_to @transaction
+    else
+      render :edit
+    end
+  end
+
   def external
     # external_expenses
     @transactions = Transaction.where(user_id: current_user.id, group_id: nil).order(created_at: :desc)
@@ -30,5 +50,10 @@ class TransactionsController < ApplicationController
     else
       render :new
     end
+  end
+
+  private
+  def transaction_params
+    params.require(:transaction).permit(:name, :amount, :group_id)
   end
 end

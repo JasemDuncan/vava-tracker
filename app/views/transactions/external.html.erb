@@ -1,25 +1,65 @@
-<div class="row center-xs">
-    <div class="cols-xs-8 col-md-6">
-        <div class="box">              
-        external 
-            <%total=0%>            
-            <% @transactions.each do |transaction|%>
-                <h1><%= transaction.name%></h1>
-                <div>
-                    I studied <%= transaction.amount%> HOURS
-                </div>
-                <div>
-                    <%= transaction.created_at%>
-                </div>
-                <% total=total+transaction.amount.to_int%>
-            <%end%>
-            <div>
-            TOTAL <%=total%>
-            </div>
-            <div>
-                <%= link_to "Add new", new_transaction_path%>
-            </div>
+<%= stylesheet_link_tag 'transactions', media: 'all' %>
+<%totalf=0%>            
+<% @transactions.each do |transaction|%>        
+    <% totalf=totalf+transaction.amount.to_int%>
+<%end%>
+<%totalf%>           
+
+<div class="header w-100 bg-main d-flex align-items-center">
+
+  <div class="back">
+    <%= link_to root_path, class:'link' do %>
+      <i class="fas fa-arrow-left text-light"></i>
+    <% end %>
+  </div>
+
+  <div class="d-flex text-center flex-column pt-2">
+    <h4 class="title text-casual-bold text-uppercase text-light">My external subjects</h4>    
+  </div>
+
+  <div class="new">
+    <%= link_to 'Add new', new_transaction_path, class:'button text-uppercase text-casual-bold' %>
+  </div>
+
+</div>
+
+<div class="total d-flex align-items-center pt-3 pb-3 bg-light justify-content-between">
+
+  <div class="total-element">
+    <p class="text-casual-bold text-size">Total</p>
+  </div>
+
+  <div class="total-element">
+    <p class="text-casual-bold text-size"><%= totalf %> Hours</p>
+  </div>
+
+</div>
+
+<div class="pb-5 mb-5">
+  <% @transactions.each do |transaction| %>
+    <%= link_to edit_transaction_path(transaction.id), class:'link' do %>
+      <div class="expense_big-container d-flex align-items-center bg-light mt-3">        
+
+        <div class="expense_big-titles p-2 d-flex flex-column w-100">
+
+          <div class="expenses-titles d-flex justify-content-between">
+            <p class="text-size text-casual-bold pr-3"><%= transaction.name %></p>
+            <p class="text-size text-casual-bold pr-3"><%= transaction.amount %> Hours</p>
+          </div>
+
+          <div class="expenses-titles d-flex justify-content-between">
+            <p class="text-size-small text-muted text-casual-bold pr-3"><%= current_user.email %></p>
+            <p class="text-size-small text-muted text-casual-bold pr-3"><%= transaction.created_at.strftime('%B %d, %Y') %></p>
+          </div>
 
         </div>
-    </div>
+
+      </div>
+
+    <% end %>
+  <% end %>
+</div>
+
+<div class="bg-success d-flex mt-2 align-items-center text-center">
+  <%= link_to 'Add new', new_transaction_path, class:"text-uppercase mt-4 mb-4 text-light text-casual-bold text-size mx-auto link" %>
 </div>
