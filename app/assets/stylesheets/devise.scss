@@ -1,0 +1,51 @@
+html {
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #f1f3f2;
+  }
+  
+  .header {
+    height: 55px;
+    padding: 0 10px;
+    border: 1px solid #434b54a2;
+  }  
+   
+  .header:nth-child(2) h4 {
+    padding-top: 10px;
+    flex: 1;
+  } 
+  
+  .back {
+    flex: 1;
+  }
+  
+  .log-in {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 4px;
+  }
+  
+  .button {
+    background: none;
+    border: none;
+    color: white;
+  }
+  
+  .txt {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .txt-box {
+    width: 100%;
+    border: 1px solid #c1c4c3;
+    padding: 5px 10px;    
+    box-shadow: 0 0 1px 0 rgba(193, 196, 195, 1);
+  }  
+  

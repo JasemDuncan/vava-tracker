@@ -1,34 +1,44 @@
-<div class="row center-xs">
-  <div class="cols-xs-8 col-md-6">
-    <div class="box">
-      <h2>Log in</h2>
-
-      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <div class="field">
-          <%= f.label :email %><br />
-          <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-        </div>
-      
-        <div class="field">
-          <%= f.label :password %><br />
-          <%= f.password_field :password, autocomplete: "current-password" %>
-        </div>
-      
-        <% if devise_mapping.rememberable? %>
-          <div class="field">
-            <%= f.check_box :remember_me %>
-            <%= f.label :remember_me %>
-          </div>
-        <% end %>
-      
-        <div class="actions">
-          <%= f.submit "Log in" %>
-        </div>
+<%= stylesheet_link_tag 'devise', media: 'all' %>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>        
+  <div class="header bg-main d-flex align-items-center">
+    <div class="back">
+      <%= link_to root_path  do %>      
+        <i class="fas fa-arrow-left text-light"></i>        
       <% end %>
-      
-      <%= render "devise/shared/links" %>
     </div>
+    <div class="d-flex align-items-center">
+      <h4 class="text-casual text-uppercase text-light">LOGIN</h4>
+    </div>
+    <div class="log-in">
+      <%= submit_tag "Log in", class:'button' %>
+    </div>
+  </div>
+
+  <div class="txt">              
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: 'txt-box' %>    
+  </div>      
+  <div class="txt">         
+      <%= f.password_field :password, autocomplete: "current-password",  placeholder: "Password", class: 'txt-box' %>    
+  </div>                
+  
+<% end %>
+
+<div class="d-flex justify-content-center">     
+  <div class="p-2">
+    <%= render "devise/shared/links" %>
   </div>
 </div>
 
 
+    
+
+
+
+
+      
+
+
+
+
+
+  
