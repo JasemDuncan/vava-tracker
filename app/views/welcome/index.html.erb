@@ -1,4 +1,5 @@
 <%= stylesheet_link_tag 'user', media: 'all' %>
+<%= stylesheet_link_tag 'devise', media: 'all' %>
 <% unless user_signed_in? %>
       <div class="container-login">
         <div class="title-vavatra">
@@ -14,43 +15,44 @@
 <%else%>     
 <div class="user-background d-flex flex-column justify-content-between">
 
-  <div class="userpage_header-cont mt-5 d-flex flex-column align-items-center justify-content-center">    
-    <div class="text-center mb-3">
-      <h1 class="text-light">Welcome</h1>
-      <h3 class="text-light"><%= current_user.email%></h3>      
+  <div class="d-flex flex-column align-items-center  ">    
+    <div class="text-center welcome">
+      <h1 class="text-light welcome-title">Welcome</h1>
+      <h3 class="text-light welcome-user "><%= current_user.email%></h3>      
     </div>
   </div>
 
-  <div>
-    <div class=" d-flex align-items-center">
+  <div class= "menu-item-container">
+
+    <div class="d-flex align-items-center ">
       <div class="user-logo-element">
-        <div class="circle-logo text-light">          
-          <span class="logo-size">&#128221;</span>
+        <div class="circle-logo text-light">
+            <span class="logo-size">&#128221;</span>
         </div>
       </div>
-      <div class="user-text-element text-light">
+      <div class="">
         <%= link_to 'All my subjects', transactions_path, class:'link text-light text-size' %>
       </div>
     </div>
 
-    <div class="d-flex align-items-center">
+    <div class="d-flex align-items-center  ">
       <div class="user-logo-element">
         <div class="circle-logo text-light">
             <span class="logo-size">&#128215;</span>
         </div>
       </div>
-      <div class="user-text-element text-light">
+      <div class="white-line">
         <%= link_to 'All my external subjects', external_path, class:'link text-light text-size' %>        
       </div>
     </div>
 
-    <div class=" d-flex align-items-center">
+    <div class=" d-flex align-items-center  ">
       <div class="user-logo-element">
         <div class="circle-logo text-light">
           <span class="logo-size">&#128218;</span>
         </div> 
       </div>
-      <div class="user-text-element-last text-light">
+      <div class="">
         <%= link_to 'All my groups', groups_path, class:'link text-light text-size ' %>
       </div>
     </div>      

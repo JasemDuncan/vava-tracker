@@ -7,7 +7,7 @@ body {
 .user-background {
   background: rgb(18, 52, 94);
   background: linear-gradient(180deg, rgb(10, 46, 90) 45%, rgba(44, 128, 188, 1) 80%);
-  min-height: 100vh;
+  height: 96vh;
 }
 
 .user-logo-element {
@@ -20,26 +20,63 @@ body {
   margin: auto;
   display: flex;
   align-items: center;
-  border: 1px solid white;
-  padding: 10px 20px;
+  // border: 1px solid white;
+  border: 5px solid rgba(255, 255, 255,0.2);
+  padding: 10px 30px;
   border-radius: 50%;
 }
 
-.user-text-element {
-  width: 60%;
-  border-bottom: 1px solid white;
-  padding: 4% 0;
-}
 
 .user-text-element-last {
   width: 60%;
   padding: 4% 0;
+  font-size: 5rem;
 }
 
 .logo-size {
-  font-size: 30px;
+  font-size: 4rem;
 }
 
 .text-size {
-  font-size: 20px;
+  font-size: 3rem;
+  font-weight: lighter;
+  font-family: 'Montserrat', sans-serif;
+}
+.welcome {
+  margin-top: 8vh;
+}
+
+.welcome-title{
+  font-weight: normal;
+  font-size: 5rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.welcome-user {
+  font-size: 4rem;
+  font-weight: lighter;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 5vh;
+}
+
+.menu-item-container{
+  // background-color: red;
+  margin-top: -30vh;
+}
+.menu-item-emoji{
+  font-size: 5rem;;
+}
+
+
+.user-text-element {  
+  
+}
+.white-line{
+margin-top: 2vh 0;
+margin-bottom: 1.5vh 0;
+padding-top: 2vh;
+padding-bottom: 2vh;
+border-top: 5px solid rgba(255, 255, 255,0.2);
+border-bottom: 5px solid rgba(255, 255, 255,0.2);
+
 }

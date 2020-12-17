@@ -1,12 +1,13 @@
-// Place all the styles related to the transactions controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
 .header {
   height: 20%;
 }
 
 .back {
   flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 4px;
+  font-size: 3rem;
 }
 
 .title {
@@ -16,14 +17,14 @@
 .new {
   flex: 1;
   display: flex;
-  justify-content: flex-end;
-  padding-top: 4px;
+  justify-content: flex-end;  
 }
 
 .new .button {
   background: none;
   border: none;
   color: white;
+  font-size: 2.5rem;
 }
 
 .total {
@@ -33,7 +34,7 @@
 }
 
 .total-element {
-  width: 20%;
+  width: 25%;
   display: flex;
   align-items: center;
 }
@@ -74,13 +75,55 @@
 }
 
 .text-size {
-  font-size: 20px;
+  font-size: 2.5rem;
+}
+.text-total{
+  font-weight: bold;  
+  font-family: 'Montserrat', sans-serif;
 }
 
 .text-size-small {
-  font-size: 15px;
+  font-size: 2rem;
 }
 
 .bottom_container-big {
   padding: 5%;
+}
+
+
+.container-all{  
+  // background-color: green;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #f1f3f2;
+}
+
+.header {
+  width: 100%;
+  height: 10vh;
+  align-items: center !important;
+  display: flex !important;  
+  justify-content: center;  
+  justify-items: center;
+  padding: 0 10px;
+  border: 1px solid #434b54a2;
+  background-color: #3878c2;
+}
+
+.label-title{
+  flex: 2;
+  display: flex;    
+}
+
+.label-title h4{
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  font-size: 3rem;
+  color: white;
 }
