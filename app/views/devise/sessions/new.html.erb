@@ -1,35 +1,37 @@
 <%= stylesheet_link_tag 'devise', media: 'all' %>
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>        
-  <div class="header bg-main d-flex align-items-center">
-    <div class="back">
-      <%= link_to root_path  do %>      
-        <i class="fas fa-arrow-left text-light"></i>        
-      <% end %>
+
+<div class="container-login">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>        
+
+    <div class="header">
+      <div class="back">
+        <%= link_to root_path  do %>      
+          <i class="fas fa-arrow-left text-light"></i>        
+        <% end %>
+      </div>
+      <div class="label-login">
+        <h4>LOGIN</h4>
+      </div>
+      <div class="log-in">
+        <%= submit_tag "Log in", class:'button' %>
+      </div>
     </div>
-    <div class="d-flex align-items-center">
-      <h4 class="text-casual text-uppercase text-light">LOGIN</h4>
-    </div>
-    <div class="log-in">
-      <%= submit_tag "Log in", class:'button' %>
+
+    <div class="txt">              
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: 'txt-box' %>    
+          
+        <%= f.password_field :password, autocomplete: "current-password",  placeholder: "Password", class: 'txt-box' %>    
+    </div>                
+    
+  <% end %>
+
+  <div class="d-flex justify-content-center">     
+    <div class="p-2 forgot">
+      <%= render "devise/shared/links"%>
     </div>
   </div>
 
-  <div class="txt">              
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: 'txt-box' %>    
-  </div>      
-  <div class="txt">         
-      <%= f.password_field :password, autocomplete: "current-password",  placeholder: "Password", class: 'txt-box' %>    
-  </div>                
-  
-<% end %>
-
-<div class="d-flex justify-content-center">     
-  <div class="p-2">
-    <%= render "devise/shared/links" %>
-  </div>
 </div>
-
-
     
 
 
