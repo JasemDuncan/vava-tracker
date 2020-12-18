@@ -1,47 +1,35 @@
 <%= stylesheet_link_tag 'transactions', media: 'all' %>
        
 
-<div class="header w-100 bg-main d-flex align-items-center">
+<div class="container-all">
+  <div>
+    <div class="header">
+      <div class="back">
+        <%= link_to transactions_path, class:'link' do %>
+          <i class="fas fa-arrow-left text-light"></i>
+        <% end %>
+      </div>
+      <div class="label-title">
+        <h4 class="title text-uppercase text-light"> CREATE SUBJECT</h4>                
+      </div>
+      <div class="new">
+        <%= link_to 'Edit', edit_transaction_path(@transaction.id), class:'button text-uppercase text-casual-bold' %>
+      </div>
+    </div>
 
-  <div class="back">
-    <%= link_to transactions_path, class:'link' do %>
-      <i class="fas fa-arrow-left text-light"></i>
-    <% end %>
-  </div>
-
-  <div class="d-flex text-center flex-column pt-2">
-    <h4 class="title text-casual-bold text-uppercase text-light">CREATE SUBJECT</h4>        
-    <h6 class=" text-casual-bold text-uppercase text-light"><%= @transaction.created_at%></h6>        
-  </div>
-
-  <div class="new">
-    <%= link_to 'Edit', edit_transaction_path(@transaction.id), class:'button text-uppercase text-casual-bold' %>
-  </div>
-
-</div>
-
-
-
-<div class="pb-5 mb-5">
- 
-    
+    <div class="pb-5 mb-5">           
       <div class="expense_big-container d-flex align-items-center bg-light mt-3">        
-
         <div class="expense_big-titles p-2 d-flex flex-column w-100">
-
           <div class="expenses-titles d-flex justify-content-between">
             <p class="text-size text-casual-bold pr-3"><%= @transaction.name%></p>
             <p class="text-size text-casual-bold pr-3"><%= @transaction.amount %> Hours</p>
           </div>
-
           <div class="expenses-titles d-flex justify-content-between">            
             <p class="text-size-small text-muted text-casual-bold pr-3"><%= @transaction.created_at.strftime('%B %d, %Y') %></p>
           </div>
-
         </div>
-
       </div>
+    </div>
+  </div>
 
-    
-  
 </div>
