@@ -21,10 +21,10 @@
     <div class="new">
       <%= link_to 'Add new', new_transaction_path, class:'button ' %>
     </div>
+    
   </div>
 
-  <div class="total d-flex align-items-center pt-3 pb-3 bg-light justify-content-between">
-
+  <div class="d-flex justify-content-between total ">
     <div class="total-element">
       <p class=" text-size">Total</p>
     </div>
@@ -32,12 +32,10 @@
     <div class="total-element">
       <p class="text-size text-total"><%= totalf %> Hours</p>
     </div>
-
   </div>
 
-  <div class="pb-5 mb-5">
-    <% @transactions.each do |transaction| %>
-      
+  <div class="detail">
+    <% @transactions.each do |transaction| %>      
       <%= link_to transaction_path(transaction.id), class:'' do %>
         <div class="expense_big-container d-flex align-items-center bg-light mt-3">        
 

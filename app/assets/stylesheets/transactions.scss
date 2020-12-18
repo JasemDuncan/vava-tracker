@@ -28,9 +28,11 @@
 }
 
 .total {
-  height: 5%;
+  height: 5vh;
   padding: 0 10%;
   box-shadow: 0 2px 5px 0 rgba(186, 186, 186, 1);
+  background-color: white;
+  margin-top: -5vh;
 }
 
 .total-element {
@@ -55,8 +57,22 @@
   box-shadow: 0 2px 5px 0 rgba(186, 186, 186, 1);
 }
 
+.detail{
+  margin-top: 1vh;
+}
+
+.create-all{
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+.create-items {
+  font-size: 2rem;
+  width: 100%;
+  margin: 5vh 0;
+}
 .expense_big-container {
-  width: 95%;
+  width: 94%;
   margin: 0 auto;
   flex: 1;
   box-shadow: 0 0 5px 0 rgba(186, 186, 186, 1);
@@ -96,11 +112,22 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  justify-content: space-between;
+  height: 95vh;
   overflow: hidden;
   background-color: #f1f3f2;
 }
 
+.container-all-create{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-between;
+  height: 95vh;
+  overflow: hidden;
+  background-color: #f1f3f2;
+  justify-content: flex-start;
+}
 .header {
   width: 100%;
   height: 10vh;
