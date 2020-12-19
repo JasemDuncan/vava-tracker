@@ -5,59 +5,55 @@
 <%end%>
 <%totalf%>           
 
-<div class="header w-100 bg-main d-flex align-items-center">
-
-  <div class="back">
-    <%= link_to groups_path, class:'link' do %>
-      <i class="fas fa-arrow-left text-light"></i>
-    <% end %>
-  </div>
-
-  <div class="d-flex text-center flex-column pt-2">
-    <h4 class="title text-casual-bold text-uppercase text-light"><%= @group.name%></h4>    
-    <h6 class=" text-casual-bold text-uppercase text-light"><%= @group.created_at%></h6>    
-    <h6 class=" text-casual-bold text-light">Created by <%= @group.user.email%></h6>    
-  </div>
-
-  <div class="new">
-    <%= link_to 'Edit', edit_group_path(@group.id), class:'button text-uppercase text-casual-bold' %>
-  </div>
-
-</div>
-
-<div class="total d-flex align-items-center pt-3 pb-3 bg-light justify-content-between">
-
-  <div class="total-element">
-    <p class="text-casual-bold text-size">Total</p>
-  </div>
-
-  <div class="total-element">
-    <p class="text-casual-bold text-size"><%= totalf %> Hours</p>
-  </div>
-
-</div>
-
-<div class="pb-5 mb-5">
-  <% @inside_groups.each do |inside| %>
-    
-      <div class="expense_big-container d-flex align-items-center bg-light mt-3">        
-
-        <div class="expense_big-titles p-2 d-flex flex-column w-100">
-
-          <div class="expenses-titles d-flex justify-content-between">
-            <p class="text-size text-casual-bold pr-3"><%= inside.name %></p>
-            <p class="text-size text-casual-bold pr-3"><%= inside.amount %> Hours</p>
-          </div>
-
-          <div class="expenses-titles d-flex justify-content-between">
-            <p class="text-size-small text-muted text-casual-bold pr-3"><%= inside.email %></p>
-            <p class="text-size-small text-muted text-casual-bold pr-3"><%= inside.created_at.strftime('%B %d, %Y') %></p>
-          </div>
-
-        </div>
-
+<div class="container-all">
+  <div>
+    <div class="header">
+      <div class="back">
+        <%= link_to groups_path, class:'link' do %>
+          <i class="fas fa-arrow-left text-light"></i>
+        <% end %>
       </div>
 
-    
-  <% end %>
+      <div class="label-title">
+        <div class="d-flex flex-column justify-content">          
+          <h4 class="title text-uppercase text-light"><%= @group.name%></h4>              
+          <h5 class="subtitle  "><%= @group.created_at.strftime('%B %d, %Y')%></h6>                      
+          <h5 class=" subtitle ">Created by <%= @group.user.email%></h5>              
+         </div> 
+      </div>
+
+      <div class="new">
+        <%= link_to 'Edit', edit_group_path(@group.id), class:'button' %>
+      </div>
+
+    </div>
+
+    <div class="total">
+      <div class="total-element">
+        <p class="text-size">Total</p>
+      </div>
+
+      <div class="total-element">
+        <p class="text-size text-total"><%= totalf %> Hours</p>
+      </div>
+
+    </div>
+
+    <div class="detail">
+      <% @inside_groups.each do |inside| %>        
+          <div class="expense_big-container d-flex align-items-center bg-light mt-3">        
+            <div class="expense_big-titles p-2 d-flex flex-column w-100">
+              <div class="expenses-titles d-flex justify-content-between">
+                <p class="text-size pr-3"><%= inside.name %></p>
+                <p class="text-size pr-3"><%= inside.amount %> Hours</p>
+              </div>
+              <div class="expenses-titles d-flex justify-content-between">
+                <p class="text-size-small text-muted text-casual-bold pr-3"><%= inside.email %></p>
+                <p class="text-size-small text-muted text-casual-bold pr-3"><%= inside.created_at.strftime('%B %d, %Y') %></p>
+              </div>
+            </div>
+          </div>        
+      <% end %>
+    </div>
+  </div>
 </div>

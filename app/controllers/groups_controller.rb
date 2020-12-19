@@ -33,6 +33,8 @@ class GroupsController < ApplicationController
 
   # DELETE /groups/:id
   def destroy
+    @group = Group.find(params[:id])    
+    Transaction.where(:group_id  => @group.id).update_all(:group_id =>'')
     @group.destroy
     redirect_to groups_path
   end
