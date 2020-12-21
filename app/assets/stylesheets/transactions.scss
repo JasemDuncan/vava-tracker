@@ -132,6 +132,18 @@
   align-content: center;  
 }
 
+.avatar {
+  display: flex; 
+  justify-content: center;  
+}
+.avatar-image{
+  vertical-align: middle; 
+  align-content: center;
+  width: 4vh;  
+  height: auto;  
+  border-radius: 50%;
+}
+
 .label-title h4{
   display: flex;
   

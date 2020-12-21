@@ -24,6 +24,7 @@ class GroupsController < ApplicationController
     @group = current_user.groups.new(group_params)
     if @group.save
       redirect_to @group
+      puts 'valencia*****'
     else
       render :new
     end
@@ -62,6 +63,6 @@ class GroupsController < ApplicationController
   end
 
   def group_params
-    params.require(:group).permit(:name)
+    params.require(:group).permit(:name, :image)
   end
 end

@@ -6,4 +6,5 @@ class Group < ApplicationRecord
   # def insert_default_image
   # self.iamges=imageion html
   # end
+  has_one_attached :image
 end
