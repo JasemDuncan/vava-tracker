@@ -1,6 +1,6 @@
 class Group < ApplicationRecord
   belongs_to :user
-  validates :name, presence: true
+  validates :name, :image, presence: true
   # before_create :insert_dafult_image
   # private
   # def insert_default_image

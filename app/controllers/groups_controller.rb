@@ -23,8 +23,7 @@ class GroupsController < ApplicationController
   def create
     @group = current_user.groups.new(group_params)
     if @group.save
-      redirect_to @group
-      puts 'valencia*****'
+      redirect_to @group      
     else
       render :new
     end
