@@ -17,7 +17,7 @@
       <h4 class="title text-uppercase text-light"> Edit Subject</h4>    
     </div>
     <div class="new">   
-      <%= link_to 'Delete', @transaction,  class: "button", method: :delete%>
+      <%= link_to 'Delete', @transaction, method: :delete , data: { confirm: 'Are you sure?' } , class: "button" %>
     </div>
   </div>
 

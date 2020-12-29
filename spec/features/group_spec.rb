@@ -10,13 +10,16 @@ RSpec.feature 'Group', type: :feature do
       click_on 'Log in'
     end
 
+    scenario 'List user groups' do
+      visit 'http://localhost:3000/groups'      
+      expect(page).to have_content("yaser@gmail.com")
+    end
+
     scenario 'Create a group' do
       visit 'http://localhost:3000/groups/new'
       fill_in 'group_name', with: 'Group Test'
-      click_on 'SAVE GROUP'
-    # #   find(:xpath, '//form[@id="new_comment"][@action="/posts/1/comments"]//input[@id="comment_content"]').set('This a comment from Yaser')
-    # #   find(:xpath, '//form[@id="new_comment"][@action="/posts/1/comments"]').click_on('Comment')
-       expect(page).to have_content("Image can't be blank")
+      click_on 'Save group'    
+      expect(page).to have_content("Image can't be blank")
     end
   end
 end
