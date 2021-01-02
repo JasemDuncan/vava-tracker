@@ -15,19 +15,17 @@ RSpec.feature 'Transaction', type: :feature do
 
       fill_in 'transaction_name', with: 'Intro 1'
       fill_in 'transaction_amount', with: '2'
-      click_on 'Save subject'    
-      expect(page).to have_content("Intro 1")
+      click_on 'Save subject'
+      expect(page).to have_content('Intro 1')
     end
-
 
     scenario 'List all my subjects' do
       visit 'http://localhost:3000/transactions/new'
       fill_in 'transaction_name', with: 'Intro 1'
       fill_in 'transaction_amount', with: '2'
-      click_on 'Save subject'    
-      visit 'http://localhost:3000/transactions'      
-      expect(page).to have_content("2 Hours")
+      click_on 'Save subject'
+      visit 'http://localhost:3000/transactions'
+      expect(page).to have_content('2 Hours')
     end
-
   end
 end

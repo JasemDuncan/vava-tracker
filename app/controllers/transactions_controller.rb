@@ -19,7 +19,7 @@ class TransactionsController < ApplicationController
   end
 
   # DELETE /transactions/:id
-  def destroy    
+  def destroy
     @transaction = Transaction.find(params[:id])
     @transaction.destroy
     redirect_to transactions_path

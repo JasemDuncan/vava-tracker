@@ -7,17 +7,16 @@ RSpec.describe TransactionsController, type: :routing do
     end
 
     it 'Show transaction' do
-        expect(get: '/transactions/1').to route_to('transactions#show', id: '1')
+      expect(get: '/transactions/1').to route_to('transactions#show', id: '1')
     end
 
     it 'Create transaction' do
-        expect(post: '/transactions').to route_to('transactions#create')
+      expect(post: '/transactions').to route_to('transactions#create')
     end
-
 
     it 'New group' do
       expect(get: '/transactions/new').to route_to('transactions#new')
-    end   
+    end
 
     it 'Edit transaction' do
       expect(get: '/transactions/1/edit').to route_to('transactions#edit', id: '1')

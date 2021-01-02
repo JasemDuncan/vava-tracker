@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Group, type: :model do
-  describe 'associations' do    
+  describe 'associations' do
     it { should have_one_attached(:image) }
     it { is_expected.to belong_to(:user) }
   end
@@ -13,5 +13,4 @@ RSpec.describe Group, type: :model do
   describe 'validations of image' do
     it { should validate_presence_of(:image) }
   end
-
 end

@@ -7,20 +7,20 @@ RSpec.describe GroupsController, type: :routing do
     end
 
     it 'Show groups' do
-        expect(get: '/groups/1').to route_to('groups#show', id: '1')
+      expect(get: '/groups/1').to route_to('groups#show', id: '1')
     end
 
     it 'Create a group' do
-        expect(post: '/groups').to route_to('groups#create')
+      expect(post: '/groups').to route_to('groups#create')
     end
 
     it 'New group' do
-        expect(get: '/groups/new').to route_to('groups#new')
-    end   
+      expect(get: '/groups/new').to route_to('groups#new')
+    end
 
     it 'Edit  a group' do
       expect(get: '/groups/1/edit').to route_to('groups#edit', id: '1')
-    end    
+    end
 
     it 'Update with put' do
       expect(put: '/groups/1').to route_to('groups#update', id: '1')

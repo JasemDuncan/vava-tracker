@@ -11,14 +11,14 @@ RSpec.feature 'Group', type: :feature do
     end
 
     scenario 'List user groups' do
-      visit 'http://localhost:3000/groups'      
-      expect(page).to have_content("yaser@gmail.com")
+      visit 'http://localhost:3000/groups'
+      expect(page).to have_content('yaser@gmail.com')
     end
 
     scenario 'Create a group' do
       visit 'http://localhost:3000/groups/new'
       fill_in 'group_name', with: 'Group Test'
-      click_on 'Save group'    
+      click_on 'Save group'
       expect(page).to have_content("Image can't be blank")
     end
   end
