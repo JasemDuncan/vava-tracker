@@ -5,11 +5,11 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
     # drop_table :users
     create_table :users do |t|
       ## Database authenticatable
-      t.text :email,              null: false, default: ""
-      t.text :encrypted_password, null: false, default: ""
+      t.text :email, null: false, default: ''
+      t.text :encrypted_password, null: false, default: ''
 
       ## Recoverable
-      t.text   :reset_password_token
+      t.text :reset_password_token
       t.datetime :reset_password_sent_at
 
       ## Rememberable
