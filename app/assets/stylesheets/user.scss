@@ -21,11 +21,10 @@ body {
   display: flex;
   align-items: center;
   // border: 1px solid white;
-  border: 5px solid rgba(255, 255, 255,0.2);
+  border: 5px solid rgba(255, 255, 255, 0.2);
   padding: 10px 10px;
   border-radius: 50%;
 }
-
 
 .user-text-element-last {
   width: 60%;
@@ -43,17 +42,18 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-.group-created-delete{
-  color:white;
+.group-created-delete {
+  color: white;
   font-size: 2rem;
   font-family: 'Montserrat', sans-serif;
   font-weight: normal;
 }
+
 .welcome {
   margin-top: 8vh;
 }
 
-.welcome-title{
+.welcome-title {
   font-weight: normal;
   font-size: 5rem;
   font-family: 'Montserrat', sans-serif;
@@ -66,24 +66,20 @@ body {
   margin-top: 5vh;
 }
 
-.menu-item-container{
+.menu-item-container {
   // background-color: red;
   margin-top: -30vh;
 }
-.menu-item-emoji{
-  font-size: 5rem;;
+
+.menu-item-emoji {
+  font-size: 5rem;
 }
 
-
-.user-text-element {  
-  
-}
-.white-line{
-margin-top: 2vh 0;
-margin-bottom: 1.5vh 0;
-padding-top: 2vh;
-padding-bottom: 2vh;
-border-top: 5px solid rgba(255, 255, 255,0.2);
-border-bottom: 5px solid rgba(255, 255, 255,0.2);
-
+.white-line {
+  margin-top: 2vh;
+  margin-bottom: 1.5vh;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  border-top: 5px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 5px solid rgba(255, 255, 255, 0.2);
 }
