@@ -1,7 +1,17 @@
 {
   "dependencies": {
+    "@rails/webpacker": "4.3.0",
     "bootstrap": "^4.5.3",
     "jquery": "^3.5.1",
+    "jquery-ujs": "^1.2.2",
     "popper.js": "^1.16.1"
+  },
+  "devDependencies": {
+    "stylelint": "^13.3.3",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-config-standard": "20.0.x",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "3.17.x",
+    "webpack-dev-server": "^3.11.0"
   }
 }

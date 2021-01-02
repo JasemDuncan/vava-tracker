@@ -1,82 +1,180 @@
-// Place all the styles related to the transactions controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
-.header {
-  height: 20%;
+.error-message {
+  font-size: 3rem;
+  color: red;
 }
-.back {
-    flex: 1;
-  }
+
 .title {
-    font-size: 25px;
+  // font-size: 25px;
 }
+
+.subtitle {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.new .button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2.5rem;
+}
+
+.total-element {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.total_title-container-half {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.total_title-container p {
+  margin: auto;
+}
+
+.total_big-container {
+  height: 8%;
+  padding: 0 10%;
+  box-shadow: 0 2px 5px 0 rgba(186, 186, 186, 1);
+}
+
+.detail {
+  margin-top: 1vh;
+}
+
+.create-all {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+.create-items {
+  font-size: 2rem;
+  width: 100%;
+  margin: 5vh 0;
+}
+
+.expense_big-container {
+  width: 94%;
+  margin: 0 auto;
+  flex: 1;
+  box-shadow: 0 0 5px 0 rgba(186, 186, 186, 1);
+}
+
+.expense_big-image {
+  width: 40%;
+}
+
+.expense_big-image img {
+  width: 90%;
+}
+
+.expense_big-titles {
+  width: 70%;
+}
+
+.text-size-small {
+  font-size: 2rem;
+}
+
+.bottom_container-big {
+  padding: 5%;
+}
+
+.container-all {
+  //ok
+  // background-color: green;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 95vh;
+  overflow: hidden;
+  background-color: #f1f3f2;
+}
+
+.header {
+  width: 100%;
+  // height: 10vh;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  padding: 0 10px;
+  border: 1px solid #434b54a2;
+  background-color: #3878c2;
+}
+
+.back {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 4px;
+  font-size: 3rem;
+}
+
+.label-title {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+}
+
+.avatar-image {
+  vertical-align: middle;
+  align-content: center;
+  width: 4vh;
+  height: auto;
+  border-radius: 50%;
+}
+
+.label-title h4 {
+  display: flex;
+  font-size: 2.7rem;
+  color: white;
+}
+
 .new {
   flex: 1;
   display: flex;
   justify-content: flex-end;
-  padding-top: 4px;
 }
 
-.new .button{
-    background: none;
-    border: none;
-    color: white;
-}
-.total{
-    height: 5%;
-    padding: 0 10%;
-    box-shadow: 0 2px 5px 0 rgba(186,186,186,1);
+.total {
+  height: 5vh;
+  padding: 0 10%;
+  box-shadow: 0 2px 5px 0 rgba(186, 186, 186, 1);
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
 }
 
-.total-element {
-    width: 20%;
-    display: flex;
-    align-items: center;
-  }
-  
-  .total_title-container-half {
-    width: 50%;
-    display: flex;
-    align-items: center;
-  }
-  
-  .total_title-container p {
-    margin: auto;
-  }
-  
-  .total_big-container {
-    height: 8%;
-    padding: 0 10%;
-    box-shadow: 0 2px 5px 0 rgba(186, 186, 186, 1);
-  }
-  
-  .expense_big-container {
-    width: 95%;
-    margin: 0 auto;
-    flex: 1;
-    box-shadow: 0 0 5px 0 rgba(186, 186, 186, 1);
-  }
-  
-  .expense_big-image {
-    width: 40%;
-  }
-  
-  .expense_big-image img {
-    width: 90%;
-  }
-  
-  .expense_big-titles {
-    width: 70%;
-  }
-  
-  .text-size {
-    font-size: 20px;
-  }
-  
-  .text-size-small {
-    font-size: 15px;
-  }
-  
-  .bottom_container-big {
-    padding: 5%;
-  }
+.text-size {
+  font-size: 2.5rem;
+}
+
+.text-total {
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container-all-create {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-between;
+  height: 95vh;
+  overflow: hidden;
+  background-color: #f1f3f2;
+  justify-content: flex-start;
+}
