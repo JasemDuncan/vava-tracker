@@ -26,6 +26,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'hirb', '~> 0.7.3'
 gem 'jquery-rails'
 gem 'rubocop', '~>0.81.0'
+gem 'reports_kit'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

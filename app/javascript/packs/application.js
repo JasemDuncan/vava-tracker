@@ -22,3 +22,4 @@ import "bootstrap";
 //= require jquery_ujs
 //= require_tree .
 import 'jquery-ujs';
+//= require reports_kit/application

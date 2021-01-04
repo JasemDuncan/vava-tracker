@@ -2,7 +2,7 @@ class GroupsController < ApplicationController
   # callback or you can use
   # before_action :authenticate_user!, only: [:create, :new]
   before_action :validate_user, except: %i[show index update edit]
-  before_action :set_group, except: %i[index new create]
+  before_action :set_group, except: %i[index new create jasem]
   # GET group
   def index
     @groups = Group.where(user_id: current_user.id).order(name: :asc)
@@ -46,6 +46,10 @@ class GroupsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def jasem
+    puts "Jasem"
   end
 
   private

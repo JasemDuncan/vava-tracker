@@ -14,7 +14,9 @@ Rails.application.routes.draw do
   # get 'users/splash'
   # post 'users/splash'
   # post 'users/login'  
+  get 'groups/jasem'
   
   root 'welcome#index'
+  mount ReportsKit::Engine, at: '/'
 
 end
