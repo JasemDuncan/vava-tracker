@@ -37,6 +37,7 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   # gem 'capybara', '>= 2.15'
   gem 'rspec-rails', '~> 4.0.1'
+  gem 'letter_opener'
 end
 
 group :development do
