@@ -1,34 +1,35 @@
-<div class="row center-xs">
-  <div class="cols-xs-8 col-md-6">
-    <div class="box">
-      <h2>Sign up</h2>
-      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-        <%= render "devise/shared/error_messages", resource: resource %>
 
-        <div class="field">
-          <%= f.label :email %><br />
-          <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-        </div>
 
-        <div class="field">
-          <%= f.label :password %>
-          <% if @minimum_password_length %>
-          <em>(<%= @minimum_password_length %> characters minimum)</em>
-          <% end %><br />
-          <%= f.password_field :password, autocomplete: "new-password" %>
-        </div>
+<%= stylesheet_link_tag 'devise', media: 'all' %>
 
-        <div class="field">
-          <%= f.label :password_confirmation %><br />
-          <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-        </div>
+<div class="container-login">
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>        
+    <%= render "devise/shared/error_messages", resource: resource %>
+    <div class="header">
+      <div class="back">
+        <%= link_to root_path  do %>      
+          <i class="fas fa-arrow-left text-light"></i>        
+        <% end %>
+      </div>
+      <div class="label-login">
+        <h4>SIGN UP</h4>
+      </div>
+      <div class="log-in">
+        <%= submit_tag "Sign up", class:'button' %>
+      </div>
+    </div>
 
-        <div class="actions">
-          <%= f.submit "Sign up" %>
-        </div>
-      <% end %>
+    <div class="txt">              
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: 'txt-box' %>           
+      <%= f.password_field :password, autocomplete: "current-password",  placeholder: "Password", class: 'txt-box' %>    
+      <%= f.password_field :password_confirmation, autocomplete: "current-password",  placeholder: "Password confirmation", class: 'txt-box' %>    
+    </div>                    
+  <% end %>
 
-      <%= render "devise/shared/links" %>
+  <div class="d-flex justify-content-center">     
+    <div class="p-2 forgot">
+      <%= render "devise/shared/links"%>
     </div>
   </div>
+
 </div>

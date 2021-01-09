@@ -35,7 +35,7 @@ class TransactionsController < ApplicationController
   end
 
   def external
-    # external_expenses
+    # n+1
     @transactions = Transaction.where(user_id: current_user.id, group_id: nil).order(created_at: :desc)
   end
 
