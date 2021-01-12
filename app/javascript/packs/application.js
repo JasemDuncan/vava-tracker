@@ -19,6 +19,5 @@ import "bootstrap";
 //import "./src/application.scss";
 //global.$=jQuery
 //= require jquery
-//= require jquery_ujs
+
 //= require_tree .
-import 'jquery-ujs';
