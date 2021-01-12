@@ -1,5 +1,4 @@
-# VavaTracker App
-
+# VavaTracker App 🚀
 This project is built in Ruby on Rails and it is based on an app for tracking the number of hours that a user studies. 
 
 You can create a user and log into the app, the main profile page is divided by "All my subjects", "All external subjects" and "All my groups". 
