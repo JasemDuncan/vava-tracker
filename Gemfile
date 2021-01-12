@@ -23,10 +23,10 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem 'bullet', group: 'development'
 gem 'hirb', '~> 0.7.3'
 gem 'jquery-rails'
 gem 'rubocop', '~>0.81.0'
-gem 'bullet', group: 'development'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
@@ -37,8 +37,8 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   # gem 'capybara', '>= 2.15'
-  gem 'rspec-rails', '~> 4.0.1'
   gem 'letter_opener'
+  gem 'rspec-rails', '~> 4.0.1'
 end
 
 group :development do

@@ -10,6 +10,7 @@ class Group < ApplicationRecord
   has_one_attached :image
 
   private
+
   def send_mail
     GroupMailer.new_group(self).deliver_now
   end
