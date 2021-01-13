@@ -12,6 +12,6 @@ class Group < ApplicationRecord
   private
 
   def send_mail
-    GroupMailer.new_group(self).deliver_now
+    # GroupMailer.new_group(self).deliver_now
   end
 end
