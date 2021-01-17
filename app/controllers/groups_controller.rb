@@ -1,4 +1,5 @@
 class GroupsController < ApplicationController
+  include ApplicationHelper
   before_action :validate_user, except: %i[show index update edit]
   before_action :set_group, except: %i[index new create]
   # GET group
@@ -50,12 +51,6 @@ class GroupsController < ApplicationController
   def set_group
     puts '**here set_group'
     @group = Group.find(params[:id])
-  end
-
-  def validate_user
-    return if user_signed_in?
-
-    redirect_to new_user_session_path, notice: 'For create new group you must log in first'
   end
 
   def group_params
