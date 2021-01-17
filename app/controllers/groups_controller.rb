@@ -1,6 +1,4 @@
-class GroupsController < ApplicationController
-  # callback or you can use
-  # before_action :authenticate_user!, only: [:create, :new]
+class GroupsController < ApplicationController  
   before_action :validate_user, except: %i[show index update edit]
   before_action :set_group, except: %i[index new create]
   # GET group
@@ -10,8 +8,7 @@ class GroupsController < ApplicationController
 
   # GET /groups/:id
   def show
-    @inside_groups = Transaction.joins(:user).select('users.email,transactions.name,transactions.amount,transactions.created_at').where(group_id: params[:id], user_id: current_user.id)
-    # @group = Group.find(params[:id])
+    @inside_groups = Transaction.joins(:user).select('users.email,transactions.name,transactions.amount,transactions.created_at').where(group_id: params[:id], user_id: current_user.id)    
   end
 
   # Get /groups/new
