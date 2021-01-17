@@ -3,12 +3,12 @@ class GroupsController < ApplicationController
   before_action :set_group, except: %i[index new create]
   # GET group
   def index
-    @groups = Group.where(user_id: current_user.id).order(name: :asc)
+    @groups = Group.order(name: :asc)
   end
 
   # GET /groups/:id
   def show
-    @inside_groups = Transaction.joins(:user).select('users.email,transactions.name,transactions.amount,transactions.created_at').where(group_id: params[:id], user_id: current_user.id)
+    @inside_groups = Transaction.joins(:user).select('users.email,transactions.name,transactions.amount,transactions.created_at').where(group_id: params[:id])
   end
 
   # Get /groups/new
