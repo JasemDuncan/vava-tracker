@@ -1,9 +1,9 @@
 <%= stylesheet_link_tag 'transactions', media: 'all' %>    
-<%= @transaction.errors.full_messages do |message|%>
-    <div>
-        *<%= message %>
-    </div>
+<div class= "error_message">
+<%= @transaction.errors.full_messages.to_sentence do |message|%>   
+        *<%= message %>            
 <%end%>
+</div>
 
 
 <div class="container-all-create">

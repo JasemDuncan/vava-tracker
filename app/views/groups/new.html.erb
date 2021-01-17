@@ -1,8 +1,8 @@
-<%= @group.errors.full_messages do |message|%>
-    <div>
-        *<%= message %>
-    </div>
+<div class= "error_message">
+<%= @group.errors.full_messages.to_sentence do |message|%>    
+        *<%= message %>    
 <%end%>
+</div>
 
 <%= stylesheet_link_tag 'transactions', media: 'all' %>    
 
