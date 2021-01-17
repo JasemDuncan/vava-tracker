@@ -20,8 +20,6 @@ class GroupsController < ApplicationController
   def create
     @group = current_user.groups.new(group_params)
     if @group.save
-      # Tell the UserMailer to send a welcome email after save
-      # UserMailer.with(user: @user).welcome_email.deliver_later
       redirect_to @group
     else
       render :new

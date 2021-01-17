@@ -21,6 +21,9 @@ When a user creates a new group an email is sending to the user's mail rememberi
 
 ![screenshot](docs/profile.png)
 
+## Extra Feature
+
+![screenshot](docs/NewFeatureSendMail.png)
 
 ## Live version
 
