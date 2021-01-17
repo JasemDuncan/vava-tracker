@@ -5,16 +5,6 @@ Rails.application.routes.draw do
   resources :transactions
   get 'external', to: 'transactions#external', as: 'external'
   #get 'group/index'
-  resources :groups  
-
-  resources :welcome
-
-  # get 'users/index'
-  # get 'users/login'
-  # get 'users/splash'
-  # post 'users/splash'
-  # post 'users/login'  
-  
+  resources :groups   
   root 'welcome#index'
-
 end
