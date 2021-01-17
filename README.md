@@ -31,6 +31,9 @@ When a user creates a new group an email is sending to the user's mail rememberi
 -   ruby '2.7.1'
 -   'rails', '~> 6.0.3', '>= 6.0.3.2'
 
+## Entity Relationship Diagram
+
+![screenshot](docs/ERD.png)
 
 ## Getting Started
 
@@ -43,6 +46,46 @@ When a user creates a new group an email is sending to the user's mail rememberi
 -   Run the server using the command 'rails server'
 -   Access http://localhost:3000/ in your browser
 -   Use the links, forms and buttons to explore the features and create objects in our database
+
+### Prerequisites
+
+-   Ruby: 2.7.0
+-   Rails: 6.0.3
+-   Postgres: >=9.5
+
+### Setup
+
+> Remember that you need install all the gems before trying to run the program. It's very important to follow the next instructions.
+
+Instal gems with:
+
+```
+bundle install
+```
+
+Setup database with:
+
+```
+   rails db:create
+   rails db:migrate
+```
+
+### Usage
+
+Start server with:
+
+```
+    rails server
+```
+
+Open `http://localhost:3000/` in your browser.
+
+### Run tests
+
+```
+    rpsec
+
+```
 
 ## Author
 
@@ -69,5 +112,9 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - Project inspired by Microverse Program.
-- The layout, colors and inspiration was taken from a design by Gregoire Vella. The original design elements and guide can be fount at Behance website.
+- The layout, colors and inspiration was taken from a design by Gregoire Vella. The original design elements and guide can be fount at Behance website [Link](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=).
 - On this website, there is mention of fictional characters, rights are property of CBS® and do not hold any relationship with the project. The use of the names and images is solely for educational purposes.
+
+## 📝 License
+
+This project is [MIT](lic.url) licensed.
