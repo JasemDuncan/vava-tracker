@@ -9,8 +9,7 @@ body {
   background-color: #f1f3f2;
 }
 
-.container-login {
-  // background-color: green;
+.container-login {  
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -50,8 +49,7 @@ body {
   display: flex;
   justify-content: flex-start;
   padding-top: 4px;
-  font-size: 3rem;
-  // background-color: blue;
+  font-size: 3rem;  
 }
 
 .label-login {
@@ -62,8 +60,7 @@ body {
 .log-in {
   flex: 1;
   display: flex;
-  justify-content: flex-end;
-  // background-color: black;
+  justify-content: flex-end;  
 }
 
 .log-in .button {
@@ -92,8 +89,8 @@ body {
   font-size: 2.5rem;
 }
 
-.error_message h2{
-  color:white;
+.error_message h2 {
+  color: white;
   background-color: rgba(204, 19, 19, 0.705);
   font-size: 1.5vh;
 }
