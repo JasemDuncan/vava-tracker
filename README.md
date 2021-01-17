@@ -66,6 +66,12 @@ Instal gems with:
 bundle install
 ```
 
+Instal npm with:
+
+```
+npm install
+```
+
 Setup database with:
 
 ```
@@ -86,8 +92,7 @@ Open `http://localhost:3000/` in your browser.
 ### Run tests
 
 ```
-    rpsec
-
+    rspec
 ```
 
 ## Author
@@ -120,4 +125,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](lic.url) licensed.
+This project is [MIT](https://github.com/git/git-scm.com/blob/master/MIT-LICENSE.txt) licensed.
