@@ -1,7 +1,7 @@
 class TransactionsController < ApplicationController
   # GET /transactions
   def index
-    @transactions = Transaction.where(user_id: current_user.id).order(created_at: :desc)
+    @transactions = Transaction.where(user_id: current_user.id).order(created_at: :desc).includes(:user)
   end
 
   # GET /transactions/:id
@@ -36,7 +36,7 @@ class TransactionsController < ApplicationController
 
   def external
     # n+1
-    @transactions = Transaction.where(user_id: current_user.id, group_id: nil).order(created_at: :desc)
+    @transactions = Transaction.where(user_id: current_user.id, group_id: nil).order(created_at: :desc).includes(:user)
   end
 
   # POST /transactions/
