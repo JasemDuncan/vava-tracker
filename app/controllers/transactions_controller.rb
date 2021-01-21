@@ -7,11 +7,7 @@ class TransactionsController < ApplicationController
   # GET /transactions/:id
   def show
     @transaction = Transaction.find(params[:id])
-    # @transaction_image = Group.last
-    # @transaction_image =  Transaction.joins("INNER JOIN groups ON groups.id = transactions.group_id WHERE groups.id=1 and transactions.id=1")
-    # @transaction_image =  Group.joins("INNER JOIN transactions ON groups.id = transactions.group_id inner join active_storage_blobs on active_storage_blobs.id=groups.id  inner join active_storage_attachments on active_storage_attachments.blob_id=active_storage_blobs.id WHERE groups.id=1 and transactions.id=1")
-    @transaction_image =  Group.where(id:  Transaction.select("group_id").where(group_id: '1').limit(1))
-    # @inside_groups = Transaction.joins(:user).select('users.email,transactions.name,transactions.amount,transactions.created_at').where(group_id: params[:id])
+    @transaction_image = Group.where(id: Transaction.select('group_id').where(group_id: '1').limit(1))
   end
 
   # GET /transactions/new
