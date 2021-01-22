@@ -6,7 +6,7 @@ class TransactionsController < ApplicationController
 
   # GET /transactions/:id
   def show
-    @transaction = Transaction.find(params[:id])    
+    @transaction = Transaction.find(params[:id])
   end
 
   # GET /transactions/new
@@ -36,7 +36,7 @@ class TransactionsController < ApplicationController
 
   def external
     # n+1
-    @transactions = Transaction.external_where_transaction(current_user.id)    
+    @transactions = Transaction.external_where_transaction(current_user.id)
   end
 
   # POST /transactions/

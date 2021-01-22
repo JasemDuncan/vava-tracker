@@ -5,11 +5,11 @@ class Group < ApplicationRecord
   after_create :send_mail
   has_one_attached :image
 
-  scope :order_scope, -> {order(name: :asc)}
-  
+  scope :order_scope, -> { order(name: :asc) }
 
   private
+
   def send_mail
-    GroupMailer.new_group(self).deliver_now
+    # GroupMailer.new_group(self).deliver_now
   end
 end
