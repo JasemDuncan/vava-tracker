@@ -1,13 +1,12 @@
 class TransactionsController < ApplicationController
   # GET /transactions
   def index
-    @transactions = Transaction.where(user_id: current_user.id).order(created_at: :desc).includes(:user)
+    @transactions = Transaction.index_where_transaction(current_user.id)
   end
 
   # GET /transactions/:id
   def show
-    @transaction = Transaction.find(params[:id])
-    @transaction_image = Group.where(id: Transaction.select('group_id').where(group_id: '1').limit(1))
+    @transaction = Transaction.find(params[:id])    
   end
 
   # GET /transactions/new
@@ -37,7 +36,7 @@ class TransactionsController < ApplicationController
 
   def external
     # n+1
-    @transactions = Transaction.where(user_id: current_user.id, group_id: nil).order(created_at: :desc).includes(:user)
+    @transactions = Transaction.external_where_transaction(current_user.id)    
   end
 
   # POST /transactions/
