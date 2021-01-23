@@ -2,7 +2,7 @@
 
 <div class="container-login">
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>        
-
+  
     <div class="header">
       <div class="back">
         <%= link_to root_path  do %>      
@@ -18,11 +18,9 @@
     </div>
 
     <div class="txt">              
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: 'txt-box' %>    
-          
-        <%= f.password_field :password, autocomplete: "current-password",  placeholder: "Password", class: 'txt-box' %>    
-    </div>                
-    
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: 'txt-box' %>              
+      <%= f.password_field :password, autocomplete: "current-password",  placeholder: "Password", class: 'txt-box' %>    
+    </div>    
   <% end %>
 
   <div class="d-flex justify-content-center">     

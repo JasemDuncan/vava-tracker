@@ -10,7 +10,7 @@
     <div class="header">
       <div class="back">
         <%= link_to root_path, class:'link' do %>
-          <i class="fas fa-arrow-left text-light"></i>
+          <span>&#9194;</span>
         <% end %>
       </div>
       <div class="label-title">
@@ -41,6 +41,9 @@
                 <p class="text-size-small text-muted pr-3"><%= current_user.email %></p>
                 <p class="text-size-small text-muted pr-3"><%= transaction.created_at.strftime('%B %d, %Y') %></p>
               </div>
+            </div>
+            <div class="expenses-titles d-flex justify-content-between">
+              <p class="text-size-small text-muted pr-3"><%= transaction_image(transaction.group_id)%> </p>                            
             </div>
           </div>
         <% end %>

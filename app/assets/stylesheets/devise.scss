@@ -10,7 +10,6 @@ body {
 }
 
 .container-login {
-  // background-color: green;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -51,7 +50,6 @@ body {
   justify-content: flex-start;
   padding-top: 4px;
   font-size: 3rem;
-  // background-color: blue;
 }
 
 .label-login {
@@ -63,7 +61,6 @@ body {
   flex: 1;
   display: flex;
   justify-content: flex-end;
-  // background-color: black;
 }
 
 .log-in .button {
@@ -90,4 +87,10 @@ body {
 .forgot {
   height: 5vh;
   font-size: 2.5rem;
+}
+
+.error_message h2 {
+  color: white;
+  background-color: rgba(204, 19, 19, 0.705);
+  font-size: 1.5vh;
 }

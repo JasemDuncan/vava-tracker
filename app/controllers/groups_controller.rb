@@ -1,17 +1,15 @@
 class GroupsController < ApplicationController
-  # callback or you can use
-  # before_action :authenticate_user!, only: [:create, :new]
+  include ApplicationHelper
   before_action :validate_user, except: %i[show index update edit]
   before_action :set_group, except: %i[index new create]
   # GET group
   def index
-    @groups = Group.where(user_id: current_user.id).order(name: :asc)
+    @groups = Group.order_scope
   end
 
   # GET /groups/:id
   def show
-    @inside_groups = Transaction.joins(:user).select('users.email,transactions.name,transactions.amount,transactions.created_at').where(group_id: params[:id], user_id: current_user.id)
-    # @group = Group.find(params[:id])
+    @inside_groups = Transaction.join_scope(params[:id])
   end
 
   # Get /groups/new
@@ -23,8 +21,6 @@ class GroupsController < ApplicationController
   def create
     @group = current_user.groups.new(group_params)
     if @group.save
-      # Tell the UserMailer to send a welcome email after save
-      # UserMailer.with(user: @user).welcome_email.deliver_later
       redirect_to @group
     else
       render :new
@@ -36,7 +32,7 @@ class GroupsController < ApplicationController
   # DELETE /groups/:id
   def destroy
     @group = Group.find(params[:id])
-    Transaction.where(group_id: @group.id).update_all(group_id: '')
+    Transaction.where_destroy(@group.id)
     @group.destroy
     redirect_to groups_path
   end
@@ -55,12 +51,6 @@ class GroupsController < ApplicationController
   def set_group
     puts '**here set_group'
     @group = Group.find(params[:id])
-  end
-
-  def validate_user
-    return if user_signed_in?
-
-    redirect_to new_user_session_path, notice: 'For create new group you must log in first'
   end
 
   def group_params

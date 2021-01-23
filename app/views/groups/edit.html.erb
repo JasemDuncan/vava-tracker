@@ -1,21 +1,21 @@
-<%= @group.errors.full_messages do |message|%>
-    <div>
-        *<%= message %>
-    </div>
+<div class= "error_message">
+<%= @group.errors.full_messages.to_sentence do |message|%>    
+        *<%= message %>    
 <%end%>
+</div>
 
 <%= stylesheet_link_tag 'transactions', media: 'all' %>    
 <div class="header">
   <div class="back">
     <%= link_to groups_path, class:'link' do %>
-      <i class="fas fa-arrow-left text-light"></i>
+      <span>&#9194;</span>
     <% end %>
   </div>
   <div class="d-flex text-center flex-column pt-2 label-title">
     <h4 class="title text-uppercase text-light">Edit Group</h4>    
   </div>
   <div class="new">   
-    <%= link_to '', @group,  class: "button", method: :delete%>
+    <%= link_to 'Delete', @group,  class: "button", method: :delete%>
   </div>
 </div>
 
